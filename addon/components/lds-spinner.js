@@ -5,6 +5,7 @@ export default Ember.Component.extend({
   layout,
   size: 'medium',
   color: 'default',
+  hasContainer: false,
 
   sizeClass: Ember.computed('size', function() {
     const size = this.get('size');
@@ -20,5 +21,11 @@ export default Ember.Component.extend({
   	return (color === 'default')
   	  ? ''
   	  : ` slds-spinner--${color}`;
+  }),
+
+  hasContainer: Ember.computed('hasContainer', function() {
+  	const hasContainer = this.get('hasContainer');
+
+  	return hasContainer;
   })
 });

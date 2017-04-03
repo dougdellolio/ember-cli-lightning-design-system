@@ -1,7 +1,15 @@
-<div class="slds-spinner_container">
-  <div role="status" class="slds-spinner {{sizeClass}}{{colorClass}}">
+{{#if hasContainer}}
+  <div class="slds-spinner_container">
+    <div role="status" class="slds-spinner {{sizeClass}}{{colorClass}}">
     <span class="slds-assistive-text">Loading</span>
     <div class="slds-spinner__dot-a"></div>
     <div class="slds-spinner__dot-b"></div>
   </div>
 </div>
+{{else}}
+  <div role="status" class="slds-spinner {{sizeClass}}{{colorClass}}">
+    <span class="slds-assistive-text">Loading</span>
+    <div class="slds-spinner__dot-a"></div>
+    <div class="slds-spinner__dot-b"></div>
+  </div>
+{{/if}}
